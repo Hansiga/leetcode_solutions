@@ -21,4 +21,7 @@ class Solution {
         }
         return result.toArray(new int[result.size()][]);
     }
+
 }
+
+In this i newly learnt regarding how to convert to list and array , especially in 2dimensional.
