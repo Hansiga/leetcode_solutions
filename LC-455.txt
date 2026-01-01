@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(s);
@@ -12,4 +13,20 @@ class Solution {
         }
         return children;
     }
+=======
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(s);
+        Arrays.sort(g);
+        int children=0;
+        int cookie=0;
+        while(cookie<s.length && children<g.length){
+            if(s[cookie]>=g[children]){
+                children++;
+            }
+            cookie++;
+        }
+        return children;
+    }
+>>>>>>> e37af0abb41b7f7e883052aafc0872df72ecfdde
 }

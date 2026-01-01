@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i,j;
@@ -7,4 +8,15 @@ class Solution {
         }
         Arrays.sort(nums1);
     }
+=======
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i,j;
+        for(j=0,i=m;j<n;j++){
+            nums1[i]=nums2[j];
+            i++;
+        }
+        Arrays.sort(nums1);
+    }
+>>>>>>> e37af0abb41b7f7e883052aafc0872df72ecfdde
 }

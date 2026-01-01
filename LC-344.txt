@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public void reverseString(char[] s) {
         int left=0;
@@ -10,4 +11,18 @@ class Solution {
             right--;
         }
     }
+=======
+class Solution {
+    public void reverseString(char[] s) {
+        int left=0;
+        int right=s.length-1;
+        while(left<right){
+            char temp=s[left];
+            s[left]=s[right];
+            s[right]=temp;
+            left++;
+            right--;
+        }
+    }
+>>>>>>> e37af0abb41b7f7e883052aafc0872df72ecfdde
 }

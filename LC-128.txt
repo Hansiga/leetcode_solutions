@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public int longestConsecutive(int[] nums) {
         HashSet<Integer> set=new HashSet<>();
@@ -20,4 +21,28 @@ class Solution {
         }
         return longest;
     }
+=======
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        HashSet<Integer> set=new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            set.add(nums[i]);
+        }
+        int longest=0;
+
+        for (int num:set){
+            if(!set.contains(num-1)){
+                int count=1;
+                while(set.contains(num+1)){
+                    num=num+1;
+                    count=count+1;
+                }
+                if(count>longest){
+                    longest=count;
+                }
+            }
+        }
+        return longest;
+    }
+>>>>>>> e37af0abb41b7f7e883052aafc0872df72ecfdde
 }

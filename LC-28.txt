@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public int strStr(String haystack, String needle) {
         if(needle.length()>haystack.length()){
@@ -14,4 +15,22 @@ class Solution {
         }
         return -1;
     }
+=======
+class Solution {
+    public int strStr(String haystack, String needle) {
+        if(needle.length()>haystack.length()){
+            return -1;
+        }
+        for(int i=0;i<=haystack.length()-needle.length();i++){
+            int j=0;
+            while(j<needle.length() && haystack.charAt(i+j)==needle.charAt(j)){
+                j++;
+            }
+            if(j==needle.length()){
+                return i;
+            }
+        }
+        return -1;
+    }
+>>>>>>> e37af0abb41b7f7e883052aafc0872df72ecfdde
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
     public int[][] merge(int[][] intervals) {
         if(intervals.length<=1){
@@ -22,3 +23,32 @@ class Solution {
         return result.toArray(new int[result.size()][]);
     }
 }
+=======
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        if(intervals.length<=1){
+            return intervals;
+        }
+        Arrays.sort(intervals,(a,b)->a[0]-b[0]);
+        List<int[]> result=new ArrayList<>();
+
+        int[] current=intervals[0];
+        result.add(current);
+        for(int i=1;i<intervals.length;i++){
+            int next[]=intervals[i];
+
+            if(next[0]<=current[1]){
+                current[1]=Math.max(current[1],next[1]);
+            }
+            else{
+                current=next;
+                result.add(current);
+            }
+        }
+        return result.toArray(new int[result.size()][]);
+    }
+
+}
+
+In this i newly learnt regarding how to convert to list and array , especially in 2dimensional.
+>>>>>>> e37af0abb41b7f7e883052aafc0872df72ecfdde
